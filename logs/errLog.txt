@@ -1,0 +1,4 @@
+20230410	17:06:35	5391d54f-4337-478d-8201-030420626470	TypeErrorauthHeader?.startswith is not a function
+
+20230410	17:06:47	81726636-77de-4d00-97a1-da2004ca3b61	TypeErrorauthHeader?.startswith is not a function
+
