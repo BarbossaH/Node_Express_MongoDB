@@ -58,12 +58,15 @@ app.use('/employees', require('./routes/api/employees'));
 
 app.all('*', (req, res) => {
   res.status(404);
+  //if the header accepts html, the response returns a html file
   if (req.accepts('html')) {
     console.log(req);
+    //if the header accepts json, the response returns a json file
     res.sendFile(path.join(__dirname, 'views', '404.html'));
   } else if (req.accepts('json')) {
     res.json({ error: '404 Not Found' });
   } else {
+    //if not accepting above two type, then return content as a txt type
     res.type('txt').send('404 Not Found');
   }
   // res.status(404).sendFile(path.join(__dirname, views, '404.html'));
